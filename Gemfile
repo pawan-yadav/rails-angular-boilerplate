@@ -32,6 +32,7 @@ group :test, :development do
 end
 
 gem 'active_model_serializers'
+gem "non-stupid-digest-assets"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
