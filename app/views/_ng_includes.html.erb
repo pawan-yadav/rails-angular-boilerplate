@@ -1,0 +1,9 @@
+<% Dir.glob(Rails.root.join("app/views/templates/**/*")).each do |file| %>
+  <% file = File.basename(file)
+     no_erb_file = file.gsub(/\.erb$/, '').gsub(/^_/, '')
+     partial = 'templates/' + no_erb_file.gsub(/\.html$/, '')
+  %>
+  <script type="text/ng-template" id="/<%= no_erb_file %>">
+    <%= render :partial => partial %>
+  </script>
+<% end %>

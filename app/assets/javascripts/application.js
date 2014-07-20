@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require lodash.min
+//= require angular
+//= require angular-route
+//= require app
+//= require_tree ./app/services
+//= require_tree ./app/directives
+//= require_tree ./app/filters
+//= require_tree ./app/controllers

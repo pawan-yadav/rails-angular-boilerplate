@@ -29,6 +29,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    angularjs-rails (1.2.20)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     celluloid (0.15.2)
@@ -168,6 +169,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  angularjs-rails
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   guard
