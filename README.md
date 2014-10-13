@@ -1,9 +1,6 @@
 Boilerplate for Rails & Angular
 
-1. `git clone git@github.com:dylanjha/rails-angular-boilerplate my_awesome_app`
-2. `cd my_awesome_app`
-3. replace sqlite with postgres
-4. change git remote `git remote rm origin && git remote add origin git@github.com:user/my_awesome_app`
+`create user chess superuser;`
 
 NOTE about templates:
 

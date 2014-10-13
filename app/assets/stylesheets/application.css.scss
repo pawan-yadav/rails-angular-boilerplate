@@ -10,6 +10,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require font-awesome
  *= require_self
  */
+
+@import 'foundation/scss/normalize';
+@import 'colors';
+@import 'css3_mixins';
+@import 'typeography';
+@import 'reuseables';
+@import 'settings';
+@import 'chessboard';
+@import 'foundation/scss/foundation';
+@import 'app';

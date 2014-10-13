@@ -1,0 +1,30 @@
+.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.unstyled-link {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.centered {
+  text-align: center;
+}
+.div-table {
+  display: table;
+}
+.div-table-cell {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+.clickable {
+  cursor: pointer;
+}
+.upper {
+  text-transform: uppercase;
+}

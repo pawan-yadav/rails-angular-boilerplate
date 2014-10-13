@@ -1,0 +1,6 @@
+<div class="row" ng-show="gameInfo.turn">
+  {{ gameInfo.turn }}'s turn
+</div>
+<div class="row">
+  <ch-chess-board on-move-callback="onMove(status, fen)" board="board" game="game"></ch-chess-board>
+</div>

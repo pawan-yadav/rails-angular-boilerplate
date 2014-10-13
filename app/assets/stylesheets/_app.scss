@@ -1,0 +1,26 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+body {
+  padding: 0 rem-calc(30);
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+  &.form-control {
+    margin-bottom: 0;
+  }
+}
+
+.spinner {
+  text-align: center;
+  color: $ch-blue-green;
+}
+.spinner-lg {
+  font-size: 4em;
+}
+
+.chess-board {
+  width: 100%;
+  max-width: 600px;
+}

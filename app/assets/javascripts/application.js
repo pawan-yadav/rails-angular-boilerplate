@@ -13,8 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require lodash.min
+//= require chess
+//= require chessboardjs/chessboard-0.3.0
 //= require angular
 //= require angular-route
+//= require angular-fire
 //= require app
 //= require_tree ./app/services
 //= require_tree ./app/directives
