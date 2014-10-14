@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'sessions'}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  devise_scope :user do
+    post '/sessions/auth_token', to: 'sessions#auth_token'
+  end
+
+  namespace :mobile do
+    resources :games, only: [:show]
+  end
+
   # You can have the root of your site routed with "root"
   root 'index#index'
+
+  resources :users, only: [:index]
+  resources :games, only: [:index, :create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

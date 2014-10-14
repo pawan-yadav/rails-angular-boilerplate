@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>APPNAME</title>
+  <%= stylesheet_link_tag    'mobile', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= yield %>
+  <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+  <%= javascript_include_tag 'mobile' %>
+</body>
+</html>
