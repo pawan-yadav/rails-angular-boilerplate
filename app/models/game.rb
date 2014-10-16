@@ -12,8 +12,8 @@ class Game < ActiveRecord::Base
   def set_remote
     base_uri = "https://chessforkicks.firebaseio.com/games/#{key}"
     Firebase::Client.new(base_uri).set('meta', {
-      black: { id: white, name: user_white.name },
-      white: { id: black, name: user_black.name}
+      white: { id: white, name: user_white.name},
+      black: { id: black, name: user_black.name },
     })
     Firebase::Client.new(base_uri).set('info', {
       turn: 'white',
