@@ -12,3 +12,10 @@ For example, if you create a home template put it in `app/views/templates/_home.
 NOTE about assets:
 
 I'm using the`non-stupid-digest-assets`, which allows you to link to assets without the md5 hash: `<img src="/assets/spinner" />`
+
+
+# Games
+
+Games get created and meta data is set in firebase.
+
+Client gets user with all the user's game keys, then uses firebase as the data store.

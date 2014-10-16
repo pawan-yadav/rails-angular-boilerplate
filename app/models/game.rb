@@ -5,9 +5,21 @@ class Game < ActiveRecord::Base
 
   before_save :set_key
 
-  STATUS = %w( challenged started )
+  STATUS = %w( in_progress )
 
   validates :status, inclusion: { in: STATUS }
+
+  def set_remote
+    base_uri = "https://chessforkicks.firebaseio.com/games/#{key}"
+    Firebase::Client.new(base_uri).set('meta', {
+      black: { id: white, name: user_white.name },
+      white: { id: black, name: user_black.name}
+    })
+    Firebase::Client.new(base_uri).set('info', {
+      turn: 'white',
+      status: self.status
+    })
+  end
 
   private
 

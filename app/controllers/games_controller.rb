@@ -5,7 +5,8 @@ class GamesController < ApplicationController
   end
 
   def create
-    game = Game.create!(white: current_user.id, black: User.find(params[:challenge_user_id]).id, status: 'challenged')
+    game = Game.create!(white: current_user.id, black: User.find(params[:challenge_user_id]).id, status: 'in_progress')
+    game.set_remote
     render json: game
   end
 

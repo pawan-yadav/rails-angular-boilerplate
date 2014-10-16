@@ -17,3 +17,21 @@ User.create!({
   name: "Ansel",
   password: "apassword",
 })
+
+User.create!({
+  email: "matt.nish@gmail.com",
+  name: "Nish",
+  password: "npassword",
+})
+
+User.create!({
+  email: "marlonmolinare@gmail.com",
+  name: "Marlon",
+  password: "mpassword",
+})
+
+User.create!({
+  email: "nickbastone@gmail.com",
+  name: "Nick",
+  password: "npassword",
+})

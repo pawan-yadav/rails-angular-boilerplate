@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     post '/sessions/auth_token', to: 'sessions#auth_token'
+    get '/sessions/current', to: 'sessions#current'
   end
 
   namespace :mobile do

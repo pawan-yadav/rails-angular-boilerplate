@@ -34,11 +34,11 @@
 
   var ChessControl = new function() {
     this.myMoves = [];
-    this.gameInfo = {};
     this.game = new Chess();
     this.init = function(key, orientation){
       var self = this;
       this.orientation = orientation;
+      this.infoRef = new Firebase("https://chessforkicks.firebaseio.com/games/" + key + "/info");
       this.movesRef = new Firebase("https://chessforkicks.firebaseio.com/games/" + key + "/moves");
       this.board = chessBoardInstance(self.game);
       if(this.orientation === 'b') {
@@ -74,6 +74,7 @@
       var fen = this.game.fen();
       this.myMoves.push(fen);
       this.movesRef.push(fen);
+      this.infoRef.set({turn: this.turn, status: "in_progress"});
     };
 
     this.setGameInfo = function(fen){
