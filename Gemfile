@@ -22,7 +22,8 @@ gem 'jquery-rails'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'firebase'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
+gem 'unicorn'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
